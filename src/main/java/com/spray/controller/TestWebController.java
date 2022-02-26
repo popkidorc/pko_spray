@@ -1,11 +1,21 @@
 package com.spray.controller;
 
+import com.spray.tcp.service.TCPServer;
+import com.spray.udp.service.UDPServer;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/test")
 public class TestWebController {
+
+    @Autowired
+    private TCPServer tcpServer;
+
+
+    @Autowired
+    private UDPServer udpServer;
 
     @RequestMapping("/name")
     public String name(String name) {

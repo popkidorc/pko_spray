@@ -1,0 +1,5 @@
+tcp:
+  port: 8081
+  heartbeatTimeout: 1000
+udp:
+  port: 8082
